@@ -1,0 +1,294 @@
+%-------------------------
+% Resume in Latex
+% Author : Tim Liao
+% Based off of: https://github.com/sb2nov/resume
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{lastpage}
+
+% Bibliography
+% removes "Reference" header from bibliography 
+%\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+%
+%% removes number label and supress label altogether
+%\makeatletter
+%\renewcommand\@biblabel[1]{}
+%\makeatother
+
+
+\usepackage{multibib}
+\newcites{patents}{Patents}
+\newcites{publications}{Publications}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+
+\fancyfoot[C]{\textbf{\small{Timothy Liao}}}
+\fancyfoot[R]{\small{Page \thepage \hspace{1pt} of \pageref{LastPage}}} % add page numbering using lastpage for total page count
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumePublicationsHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeAwardsHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeAwardItem}[3][\vspace{-7pt}]{
+	\item
+    \begin{tabular*}{0.94\textwidth}[t]{l@{\extracolsep{\fill}}r}
+     {\small#2} & \small#3      
+    \end{tabular*}
+	{\textit{\small#1}}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Timothy Liao} \\ \vspace{1.5pt}
+    \small (438) 979 - 2698 $|$ \href{mailto:x@x.com}{\underline{tmliao2@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/timothy-liao-4714a411a/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/Liaotimo/Data-Science-Projects-TL}{\underline{GitHub}} 
+\end{center}
+
+%
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+	\small
+	{\item
+	\textbf{Bioinformatics}{: Biopython, Pymol, NCBI BLAST, Galaxy}\\
+	\textbf{Languages}{: Python, SQL, R} \\
+     	\textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, Jupyter Notebooks, Google Colab} \\
+	\textbf{Cloud Technologies and Data Processing}{: Google Cloud Platform (GCP), Google BigQuery, Apache Beam}\\
+     	\textbf{Data Science Libraries}{: pandas, NumPy, Matplotlib, scikit-learn, Plotly}\\
+	\textbf{Molecular Biology}{: CRISPR/Cas9 gene editing, recombinant DNA cloning, site-saturation mutagenesis, DNA sequencing analysis, high-throughput library construction, assay development, ELISA}\\
+	}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Engineer -- Bioinformatics}{July 2022 - January 2024}
+      {BenchSci (Scinapsis Analytics Inc.)}{Toronto, ON \emph(remote)}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained ETL/ELT data processing for ingestion and normalization of various diverse external databases}
+        \resumeItem{Evaluated external third party data sources in support of company objectives and assessed quality of data by employing data exploration and visualization tools}
+	  \resumeItem{Implemented robust data quality checks within ETL/ELT workflows to ensure accuracy, consistency, and completeness of processed data}
+        \resumeItem{Engineered effective data models and schemas to support data integrity and facilitate seamless integration with downstream applications}
+    \resumeItemListEnd 
+
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Associate Scientist II \small{\textit{formerly Associate Scientist I}}}{Nov 2020 - July 2022}
+      {Hyasynth Biologicals Inc.}{Montréal, QC}
+      \resumeItemListStart
+       \resumeItem{\emph{Formerly Associate Scientist I, Research Associate II, Reasearch Associate I}}
+		\resumeItem{Engineered several key enzymes for improved functions using high-throughput workflows culminating in 2 patent applications}        	
+		\resumeItem{Developed computational methods for high-volume protein engineering assay data analysis}
+		\resumeItem{Established bioinformatic methods for analysis of next-generation sequencing data}
+        	\resumeItem{Strengthened company's IP portfolio by preparation of patent applications}
+        	\resumeItem{Led protein engineering initiatives requiring coordination across several junior researchers and weekly communications with stakeholders}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Associate II \small{\textit{formerly Research Associate I}}}{May 2018 - Nov 2020}
+      {Hyasynth Biologicals Inc.}{Montréal, QC}
+      \resumeItemListStart
+        \resumeItem{Demonstrated cannabinoid drug production in a heterologous expression system}
+        \resumeItem{Optimized protocols for high-throughput construction of mutant libraries}
+        \resumeItem{Developed high-throughput enzyme assays that were used for protein engineering studies}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Graduate Student Researcher}{Jan 2014 - May 2016}
+      {Molecular Genetics, University of Toronto}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Produced photoreceptors and RPE cells from mammalian retinal stem cells using molecular signalling to direct differentiation in mammalian cell culture}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Student Researcher}{May 2011 - Aug 2013}
+      {Biological Sciences, Genetics, University of Manitoba}{Winnipeg, MB}
+      \resumeItemListStart
+        \resumeItem{Completed Honours thesis characterizing UV-damaged DNA repair in \emph{Arabidopsis thaliana} by analyzing protein interactions using various molecular biology techniques}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McGill University}{Montreal, QC}
+      {Master of Science (Applied), Biotechnology}{2017 -- 2019}
+%	{Included a biotech industry internship}
+
+    \resumeSubheading
+      {University of Manitoba}{Winnipeg, MB}
+      {Bachelor of Science (Honours), Genetics}{2009 -- 2013}
+  \resumeSubHeadingListEnd
+
+%-----------Patents-----------
+\section{Patents}
+
+\nocite{*}
+\bibliographystyle{unsrt} \bibliography{patents} 
+%	\resumeSubHeadingListStart
+%		\resumeItem{Liao T. S., Song L., Hom L., Walton C., Furlong D., Melgar M., Bhargava D., inventors; Hyasynth Biologicals Inc., assignee. Olivetolic acid cyclase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104460A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104460A1/en?assignee=Hyasynth\&oq=Hyasynth}
+%		\resumeItem{Song L., Liao T. S., Walton C., Hom L., Melgar M., Furlong D., Bhargava, D., Palys S., Bourgeois L., inventors; Hyasynth Biologicals Inc., assignee. Cannabidiolic acid synthase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104468A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104468A1/en?assignee=Hyasynth\&oq=Hyasynth. }
+%	\resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+%\nocite{*}
+%%\bibliographystyle{unsrt} 
+%\bibliography{publications} 
+
+\bibliographystylebook{plain}
+\bibliographypatents{all}
+\bibliographystylejournal{plain}
+\bibliographypublications{all}
+
+
+%-----------Awards-----------
+\section{Honours and Awards}
+
+\resumeItemListStart
+    	\resumeAwardItem[Canada Graduate Scholarship -- Master's level]{CIHR Frederick Banting and Charles Best}{2015-2016} 
+	\resumeAwardItem[Vision Science Research Program]{The Stella Zegas-Dunn Graduate Fellowship in Vision Science}{2014–2015, 2015 - 2016} 
+	\resumeAwardItem{NSERC CREATE in M3 Scholarship}{2014 - 2015}
+	\resumeAwardItem{Faculty of Science Undergraduate Research Award}{Summer 2011, 2012, 2013}
+	\resumeAwardItem{University of Manitoba Merit Award}{2012 - 2013}
+	\resumeAwardItem{University of Manitoba Student Union Scholarship}{2012 - 2013}
+	\resumeAwardItem{First Class Dean's Honour List}{2009 - 2013}
+  \resumeItemListEnd  
+
+
+%-------------------------------------------
+\end{document}
