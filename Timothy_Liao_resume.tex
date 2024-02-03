@@ -131,10 +131,16 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 
-\usepackage[backend=biber, natbib,  citestyle=authoryear,style=apa,sorting=none,url=false,giveninits=true,isbn=false,eprint=false,
-uniquename=false,maxbibnames=20]{biblatex}
-\setlength\bibitemsep{\baselineskip}
-\addbibresource{publications.bib}
+% Bibliography
+%
+
+\usepackage[style=apa, maxnames=50]{biblatex}
+\addbibresource{patents_and_publications.bib}
+% removes number label and supress label altogether
+\DeclareFieldFormat{labelnumberwidth}{}
+% increase sep between entries based on default itemsep
+\setlength\bibitemsep{1.3\itemsep}
+
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +188,7 @@ uniquename=false,maxbibnames=20]{biblatex}
       {Data Engineer -- Bioinformatics}{July 2022 - January 2024}
       {BenchSci (Scinapsis Analytics Inc.)}{Toronto, ON \emph(remote)}
       \resumeItemListStart
-        \resumeItem{Developed and maintained ETL/ELT data processing for ingestion and normalization of various diverse external databases}
+        \resumeItem{Developed and maintained ETL/ELT data processing for ingestion and normalization of diverse external databases}
         \resumeItem{Evaluated external third party data sources in support of company objectives and assessed quality of data by employing data exploration and visualization tools}
 	  \resumeItem{Implemented robust data quality checks within ETL/ELT workflows to ensure accuracy, consistency, and completeness of processed data}
         \resumeItem{Engineered effective data models and schemas to support data integrity and facilitate seamless integration with downstream applications}
@@ -208,7 +214,6 @@ uniquename=false,maxbibnames=20]{biblatex}
 		\resumeItem{Developed computational methods for high-volume protein engineering assay data analysis}
 		\resumeItem{Established bioinformatic methods for analysis of next-generation sequencing data}
         	\resumeItem{Strengthened company's IP portfolio by preparation of patent applications}
-        	\resumeItem{Led protein engineering initiatives requiring coordination across several junior researchers and weekly communications with stakeholders}
 		
     \resumeItemListEnd
 
@@ -255,14 +260,18 @@ uniquename=false,maxbibnames=20]{biblatex}
 %
 
 
-%-----------Patents and Publications-----------
-\section{Patents and Publications}
-	\resumeSubHeadingListStart
-		\resumeItem{Liao T. S., Song L., Hom L., Walton C., Furlong D., Melgar M., Bhargava D., inventors; Hyasynth Biologicals Inc., assignee. Olivetolic acid cyclase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104460A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104460A1/en?assignee=Hyasynth\&oq=Hyasynth}
-		\resumeItem{Song L., Liao T. S., Walton C., Hom L., Melgar M., Furlong D., Bhargava, D., Palys S., Bourgeois L., inventors; Hyasynth Biologicals Inc., assignee. Cannabidiolic acid synthase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104468A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104468A1/en?assignee=Hyasynth\&oq=Hyasynth. }
 
-	\resumeSubHeadingListEnd
-%
+%-----------Patents-----------
+\section{Patents}
+\nocite{SONG_CBD,LIAO_OAC}
+\printbibliography[heading=none]
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+\begin{refsection}
+    \nocite{LY2015114}
+    \printbibliography[heading=none]
+\end{refsection}
 %%-----------Awards-----------
 %\section{Honours and Awards}
 %

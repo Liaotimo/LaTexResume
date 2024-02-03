@@ -20,19 +20,14 @@
 \usepackage{lastpage}
 
 % Bibliography
-% removes "Reference" header from bibliography 
-%\usepackage{etoolbox}
-%\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 %
-%% removes number label and supress label altogether
-%\makeatletter
-%\renewcommand\@biblabel[1]{}
-%\makeatother
 
-
-\usepackage{multibib}
-\newcites{patents}{Patents}
-\newcites{publications}{Publications}
+\usepackage[style=apa, maxnames=50]{biblatex}
+\addbibresource{patents_and_publications.bib}
+% removes number label and supress label altogether
+\DeclareFieldFormat{labelnumberwidth}{}
+% increase sep between entries based on default itemsep
+\setlength\bibitemsep{1.3\itemsep}
 
 
 %----------FONT OPTIONS----------
@@ -181,7 +176,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Data Engineer -- Bioinformatics}{July 2022 - January 2024}
+      {Software Engineer II -- Bioinformatics}{July 2022 - January 2024}
       {BenchSci (Scinapsis Analytics Inc.)}{Toronto, ON \emph(remote)}
       \resumeItemListStart
         \resumeItem{Developed and maintained ETL/ELT data processing for ingestion and normalization of various diverse external databases}
@@ -223,14 +218,14 @@
     \resumeItemListEnd
 
     \resumeSubheading
-      {Graduate Student Researcher}{Jan 2014 - May 2016}
+      {Graduate Researcher}{Jan 2014 - May 2016}
       {Molecular Genetics, University of Toronto}{Toronto, ON}
       \resumeItemListStart
         \resumeItem{Produced photoreceptors and RPE cells from mammalian retinal stem cells using molecular signalling to direct differentiation in mammalian cell culture}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Undergraduate Student Researcher}{May 2011 - Aug 2013}
+      {Undergraduate Researcher}{May 2011 - Aug 2013}
       {Biological Sciences, Genetics, University of Manitoba}{Winnipeg, MB}
       \resumeItemListStart
         \resumeItem{Completed Honours thesis characterizing UV-damaged DNA repair in \emph{Arabidopsis thaliana} by analyzing protein interactions using various molecular biology techniques}
@@ -255,27 +250,15 @@
 
 %-----------Patents-----------
 \section{Patents}
-
-\nocite{*}
-\bibliographystyle{unsrt} \bibliography{patents} 
-%	\resumeSubHeadingListStart
-%		\resumeItem{Liao T. S., Song L., Hom L., Walton C., Furlong D., Melgar M., Bhargava D., inventors; Hyasynth Biologicals Inc., assignee. Olivetolic acid cyclase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104460A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104460A1/en?assignee=Hyasynth\&oq=Hyasynth}
-%		\resumeItem{Song L., Liao T. S., Walton C., Hom L., Melgar M., Furlong D., Bhargava, D., Palys S., Bourgeois L., inventors; Hyasynth Biologicals Inc., assignee. Cannabidiolic acid synthase variants with improved activity for use in production of phytocannabinoids. World patent WO 2022104468A1 Accessed: Jan. 17, 2024. [Online]. Available: https://patents.google.com/patent/WO2022104468A1/en?assignee=Hyasynth\&oq=Hyasynth. }
-%	\resumeSubHeadingListEnd
-
+\nocite{SONG_CBD,LIAO_OAC}
+\printbibliography[heading=none]
 
 %-----------PUBLICATIONS-----------
 \section{Publications}
-%\nocite{*}
-%%\bibliographystyle{unsrt} 
-%\bibliography{publications} 
-
-\bibliographystylebook{plain}
-\bibliographypatents{all}
-\bibliographystylejournal{plain}
-\bibliographypublications{all}
-
-
+\begin{refsection}
+    \nocite{LY2015114}
+    \printbibliography[heading=none]
+\end{refsection}
 %-----------Awards-----------
 \section{Honours and Awards}
 
