@@ -40,7 +40,7 @@
 
 %------------footer
 %\fancyfoot[C]{\textbf{\small{Timothy Liao}}}
-%\fancyfoot[R]{\small{Page \thepage \hspace{1pt} of \pageref{LastPage}}} % add page numbering using lastpage for total page count
+%\fancyfoot[R]{\small{Page \thepage \hspace{1pt} of \pageref{LastPage}}} % add page numbering using lastpage for total page counthttps://www.overleaf.com/project/65be5f2bce75cfedde5c2c29
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -80,7 +80,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -155,29 +155,11 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Timothy Liao} \\ \vspace{1.5pt}
+    \textbf{\Huge \scshape Timothy Liao} \\ \vspace{1pt}
     \small (438) 979 - 2698 $|$ \href{mailto:x@x.com}{\underline{tmliao2@gmail.com}} $|$ 
     \href{https://www.linkedin.com/in/timothy-liao-4714a411a/}{\underline{LinkedIn}} $|$
     \href{https://github.com/Liaotimo/Data-Science-Projects-TL}{\underline{GitHub}} 
 \end{center}
-
-
-%
-%-----------TECHNICAL SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-	\small
-	{\item
-	\textbf{Bioinformatics}{: Biopython, Pymol, NCBI BLAST, Galaxy}\\
-	\textbf{Languages}{: Python, SQL, R} \\
-     	\textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, Jupyter Notebooks, Google Colab} \\
-	\textbf{Cloud Technologies and Data Processing}{: Google Cloud Platform (GCP), Google BigQuery, Apache Beam}\\
-     	\textbf{Data Science Libraries}{: pandas, NumPy, Matplotlib, scikit-learn, Plotly}\\
-	\textbf{Molecular Biology}{: CRISPR/Cas9 gene editing, recombinant DNA cloning, site-saturation mutagenesis, DNA sequencing analysis, high-throughput library construction, assay development, ELISA}\\
-	}
- \end{itemize}
-
-
 
 
 %-----------EXPERIENCE-----------
@@ -185,13 +167,13 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Data Engineer -- Bioinformatics}{July 2022 - January 2024}
+      {Software Engineer II -- Bioinformatics}{July 2022 - January 2024}
       {BenchSci (Scinapsis Analytics Inc.)}{Toronto, ON \emph(remote)}
       \resumeItemListStart
-        \resumeItem{Developed and maintained ETL/ELT data processing for ingestion and normalization of diverse external databases}
+        \resumeItem{Developed and maintained ETL/ELT data pipelines for ingestion and normalization of external biodata databases}
         \resumeItem{Evaluated external third party data sources in support of company objectives and assessed quality of data by employing data exploration and visualization tools}
 	  \resumeItem{Implemented robust data quality checks within ETL/ELT workflows to ensure accuracy, consistency, and completeness of processed data}
-        \resumeItem{Engineered effective data models and schemas to support data integrity and facilitate seamless integration with downstream applications}
+        \resumeItem{Engineered effective data models and schemas to support data integrity and facilitate integration with downstream applications}
     \resumeItemListEnd 
 
       
@@ -209,8 +191,8 @@
       {Associate Scientist II}{May 2018 - July 2022}
       {Hyasynth Biologicals Inc.}{Montréal, QC}
       \resumeItemListStart
-		\resumeItem{\emph{Formerly Associate Scientist I, Research Associate II, Reasearch Associate I}}
-		\resumeItem{Engineered several key enzymes for improved functions using high-throughput workflows culminating in 2 patent applications}        	
+		\resumeItem{\emph{Formerly Associate Scientist I, Research Associate II, Research Associate I}}
+		\resumeItem{Engineered several key enzymes for improved functions using high-throughput workflows culminating in inventorship on 2 patent applications}        	
 		\resumeItem{Developed computational methods for high-volume protein engineering assay data analysis}
 		\resumeItem{Established bioinformatic methods for analysis of next-generation sequencing data}
         	\resumeItem{Strengthened company's IP portfolio by preparation of patent applications}
@@ -233,6 +215,21 @@
 
   \resumeSubHeadingListEnd
 
+
+%
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+	\small
+	{\item
+	\textbf{Bioinformatics}{: Biopython, Pymol, NCBI BLAST, Galaxy, Bioconductor}\\
+	\textbf{Languages}{: Python, SQL, R} \\
+     	\textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, Jupyter Notebooks, Google Colab} \\
+	\textbf{Cloud Technologies and Data Processing}{: Google Cloud Platform (GCP), Google BigQuery, Apache Beam, Snakemake}\\
+     	\textbf{Data Science Libraries}{: pandas, NumPy, Matplotlib, scikit-learn, Plotly}\\
+	\textbf{Molecular Biology}{: CRISPR/Cas9 gene editing, recombinant DNA cloning, site-saturation mutagenesis, DNA sequencing analysis, high-throughput library construction, assay development, ELISA}\\
+	}
+ \end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -264,7 +261,7 @@
 %-----------Patents-----------
 \section{Patents}
 \nocite{SONG_CBD,LIAO_OAC}
-\printbibliography[heading=none]
+  \printbibliography[heading=none]
 
 %-----------PUBLICATIONS-----------
 \section{Publications}
